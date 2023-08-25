@@ -9,38 +9,43 @@ namespace Calculator
     public class MathRequest
     {
         #region private attributs
-        private float op1;
-        private float op2;
-        private char ope;
-        private float result;
+        private float _op1;
+        private float _op2;
+        private char _ope;
+        private float _result;
         #endregion private attributs
 
         #region public methodes
         public MathRequest(float op1, char ope, float op2)
         {
-            this.op1 = op1;
-            this.ope = ope;
-            this.op2 = op2;
+            _op1 = op1;
+            _ope = ope;
+            _op2 = op2;
         }
 
         public float Op1()
         {
-            return op1;
+            return _op1;
         }
 
         public char Ope()
         {
-            return ope;
+            return _ope;
         }
 
         public float Op2()
         {
-            return op2;
+            return _op2;
         }
 
-        public float Result()
+        public float GetResult()
         {
-            return result;
+            return _result;
+        }
+
+        public void SetResult(float result)
+        {
+            _result = result;
         }
         #endregion public methodes
 
