@@ -8,6 +8,7 @@ namespace Calculator
         private static char oper;
         private static float op2;
         private static float result = 0;
+        private static MathLib mathLib = new MathLib();
         static void Main(string[] args)
         {
             while (true)
@@ -29,36 +30,16 @@ namespace Calculator
                 Console.WriteLine("**********RESULT*****************");
                 try
                 {
-                    result = Calculate(op1, oper, op2);
+                    result = mathLib.Calculate(op1, oper, op2);
                     Console.Clear();
                     Console.WriteLine("Calculation is " + op1 + " " + oper + " " + op2 + " = " + result);
                 }
-                catch (BadOperatorException ex)
+                catch (MathLib.BadOperatorException ex)
                 {
                     Console.Clear();
                     Console.WriteLine("This operator " + oper + " doesn't exist !");
                 }
             }
         }
-
-        private static float Calculate(float op1, char oper, float op2)
-        {
-            switch (oper) 
-            {
-                case '+':
-                    return op1 + op2;
-                case '-':
-                    return op1 - op2;
-                case '*':
-                    return op1 * op2;
-                case '/':
-                    return op1 / op2;
-                default:
-                    throw new BadOperatorException();
-               }
-        }
-
-        private class CalcException : Exception { };
-        private class BadOperatorException : CalcException { };
     }
 }
