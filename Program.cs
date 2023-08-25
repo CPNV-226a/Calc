@@ -1,15 +1,16 @@
-﻿namespace Calculator
+﻿using System.Diagnostics;
+
+namespace Calculator
 {
     internal class Program
     {
-        static private float op1;
-        static private char oper;
-        static private float op2;
-        static private float result;
-
+        private static float op1;
+        private static char oper;
+        private static float op2;
+        private static float result = 0;
         static void Main(string[] args)
         {
-            while(true)
+            while (true)
             {
                 Console.WriteLine("***********INPUT*****************");
                 Console.Write("Enter the first operande : ");
@@ -29,13 +30,14 @@
                 try
                 {
                     result = Calculate(op1, oper, op2);
+                    Console.Clear();
+                    Console.WriteLine("Calculation is " + op1 + " " + oper + " " + op2 + " = " + result);
                 }
-                catch (NotImplementedException ex)
+                catch (BadOperatorException ex)
                 {
-                    Console.Write("This operator doesn't exist !");
+                    Console.Clear();
+                    Console.WriteLine("This operator " + oper + " doesn't exist !");
                 }
-                Console.Clear();
-                Console.WriteLine("Calculation is " + op1 + oper + op2 + " = " + result);
             }
         }
 
@@ -52,8 +54,11 @@
                 case '/':
                     return op1 / op2;
                 default:
-                    throw new NotImplementedException();
+                    throw new BadOperatorException();
                }
         }
+
+        private class CalcException : Exception { };
+        private class BadOperatorException : CalcException { };
     }
 }
