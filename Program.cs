@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using static Calculator.MathLib;
 
 namespace Calculator
 {
@@ -8,7 +9,6 @@ namespace Calculator
         private static char oper;
         private static float op2;
         private static float result = 0;
-        private static MathLib mathLib = new MathLib();
         static void Main(string[] args)
         {
             while (true)
@@ -30,7 +30,7 @@ namespace Calculator
                 Console.WriteLine("**********RESULT*****************");
                 try
                 {
-                    result = mathLib.Calculate(op1, oper, op2);
+                    result = Calculate(op1, oper, op2);
                     Console.Clear();
                     Console.WriteLine("Calculation is " + op1 + " " + oper + " " + op2 + " = " + result);
                 }
@@ -39,6 +39,22 @@ namespace Calculator
                     Console.Clear();
                     Console.WriteLine("This operator " + oper + " doesn't exist !");
                 }
+            }
+        }
+        private static float Calculate(float op1, char oper, float op2)
+        {
+            switch (oper)
+            {
+                case '+':
+                    return MathLib.Add(op1, op2);
+                case '-':
+                    return MathLib.Sub(op1, op2);
+                case '*':
+                    return MathLib.Mul(op1, op2);
+                case '/':
+                    return MathLib.Div(op1, op2);
+                default:
+                    throw new BadOperatorException();
             }
         }
     }

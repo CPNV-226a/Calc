@@ -1,23 +1,27 @@
 ﻿namespace Calculator
 {
-    public class MathLib
+    public static class MathLib
     {
-        public float Calculate(float op1, char oper, float op2)
+        public static float Add(float op1, float op2)
         {
-            switch (oper)
-            {
-                case '+':
-                    return op1 + op2;
-                case '-':
-                    return op1 - op2;
-                case '*':
-                    return op1 * op2;
-                case '/':
-                    return op1 / op2;
-                default:
-                    throw new BadOperatorException();
-            }
+            return op1 + op2;
         }
+
+        public static float Sub(float op1, float op2)
+        {
+            return op1 - op2;
+        }
+
+        public static float Mul(float op1, float op2) 
+        {
+            return op1 * op2;
+        }
+
+        public static float Div(float op1, float op2)
+        {
+            return op1 / op2;
+        }
+
         public class CalcException : Exception { };
         public class BadOperatorException : CalcException { };
     }
