@@ -20,13 +20,19 @@ git checkout [reference du commit que vous trouverez ci-dessous]
 
 [On demande une saisie, et on affiche ce que l'utilisateur à insérer.](https://github.com/CPNV-226a/Calc/commit/1878c383489ef3f30d4d4ee369cc3c2be38c341d)
 
+![226aCalc01](https://github.com/CPNV-226a/Calc/assets/5616312/d83a55ed-3493-405c-a2c3-a2edfbf20cab)
+
 ### Etape 2  (tout dans le main)
 
 [On gère l'addition.](https://github.com/CPNV-226a/Calc/commit/7514c5643115eac6f4e15464854fa1366e1fd48f)
 
+![226aCalc02](https://github.com/CPNV-226a/Calc/assets/5616312/709030d9-2cda-4de8-bddf-becf838053c5)
+
 ### Etape 3  (tout dans le main)
 
 [On gère les quatres opérations de base](https://github.com/CPNV-226a/Calc/commit/1b219bb3fceae628522a67e0f9bd60afed78824f)
+
+![226aCalculator03](https://github.com/CPNV-226a/Calc/assets/5616312/27462cfd-2084-4da6-b1d7-908a0e39ba3f)
 
 ### Etape 4
 
