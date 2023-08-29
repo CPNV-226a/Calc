@@ -46,7 +46,13 @@ git checkout [reference du commit que vous trouverez ci-dessous]
 
 [On décompose notre class MathLib en lui permettant d'exposer une méthode par opération.](https://github.com/CPNV-226a/Calc/commit/8ea7ec985d6ac4fa25078f3b6d236a2b5d0d4584)
 
+![image](https://github.com/CPNV-226a/Calc/assets/5616312/96bf7441-f538-4ce2-81b0-a23ddca00062)
+
 ### Etape 7
 
 [On commence le travail de création de la classe "MathRequest"](https://github.com/CPNV-226a/Calc/commit/510baba3bca6c8c365d2bed46fa41832f940b52f)
+
+![Uploading image.png…]()
+
+
 
