@@ -1,5 +1,5 @@
 # Calc
-Calc - first oop session
+Calc - first OOP session
 
 ## Intention
 
