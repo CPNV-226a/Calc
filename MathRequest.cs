@@ -16,11 +16,10 @@ namespace Calculator
         #endregion private attributs
 
         #region public methodes
-        public MathRequest(float op1, char ope, float op2)
+        public MathRequest(float op1, char ope)
         {
             this.op1 = op1;
             this.ope = ope;
-            this.op2 = op2;
         }
 
         public float Op1()
@@ -55,7 +54,6 @@ namespace Calculator
             return "Calculation is " + this.op1 + " " + this.ope + " " + this.op2 + " = " + this.result;
         }
         #endregion public methodes
-
 
     }
 }
