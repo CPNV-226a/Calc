@@ -1,4 +1,4 @@
-﻿namespace CalculatorB2B
+﻿namespace Calculator
 {
     public static class MathLib
     {
@@ -23,5 +23,6 @@
         }
 
         public class CalcException : Exception { };
+        public class BadOperatorException : CalcException { };
     }
 }
