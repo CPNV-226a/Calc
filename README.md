@@ -1,5 +1,5 @@
 # Calc
-Calc - first oop session
+Calc - first OOP session
 
 ## Intention
 
@@ -54,5 +54,6 @@ git checkout [reference du commit que vous trouverez ci-dessous]
 
 ![Uploading image.png…]()
 
+## Etape 8
 
-
+[Fin du projet](https://github.com/CPNV-226a/Calc/commit/b88b2a910c2238fda1412c46d86ad6add4c96e3a)
