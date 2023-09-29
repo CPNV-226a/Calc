@@ -1,4 +1,7 @@
-﻿namespace CalculatorB2B
+﻿using Calculator;
+using System.Diagnostics;
+
+namespace CalculatorB2B
 {
     public static class MathLib
     {
@@ -12,9 +15,9 @@
             return mathRequest.Op1() - mathRequest.Op2();
         }
 
-        public static float Mul(MathRequest mathRequest) 
+        public static float Mul(MathRequest mathRequest)
         {
-            return mathRequest.Op1() + mathRequest.Op2();
+            return mathRequest.Op1() * mathRequest.Op2();
         }
 
         public static float Div(MathRequest mathRequest)
@@ -23,5 +26,6 @@
         }
 
         public class CalcException : Exception { };
+        public class BadOperatorException : Exception { };
     }
 }

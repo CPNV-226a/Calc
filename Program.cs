@@ -1,5 +1,5 @@
 ﻿using System.Diagnostics;
-using static Calculator.MathLib;
+using CalculatorB2B;
 
 namespace Calculator
 {
@@ -54,5 +54,6 @@ namespace Calculator
                     throw new BadOperatorException();
             }
         }
+        public class BadOperatorException : Exception { };
     }
 }
